@@ -14,7 +14,7 @@ public class TestBase {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        String remote = System.getProperty("selenide.remote");
+        String remote = System.getProperty("selenide_remote");
         if (remote != null) {
             Configuration.remote = remote;
             capabilities.setCapability("enableVNC", true);
@@ -35,7 +35,7 @@ public class TestBase {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
-        if (System.getProperty("selenide.remote") != null) {
+        if (System.getProperty("selenide_remote") != null) {
             Attach.addVideo();
         }
     }
