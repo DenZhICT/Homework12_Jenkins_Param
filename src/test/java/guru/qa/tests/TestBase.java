@@ -26,7 +26,7 @@ public class TestBase {
         Configuration.browserPosition = "0x0";
 
         Configuration.browserSize = System.getProperty("browser_name", "chrome");
-        Configuration.browserVersion = System.getProperty("browser_version","105.0");
+        Configuration.browserVersion = System.getProperty("browser_version","100.0");
         Configuration.browserSize = System.getProperty("browser_size","1920x1080");
     }
 
